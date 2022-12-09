@@ -17,13 +17,23 @@ function mostrarDatos(resultado){
     console.log(resultado)
 
     for (elemento of resultado) {
-        
+      cad += `
+      <div class="card border-danger mb-3" style="max-width: 18rem;">
+       
+              <h3>Nombre: ${elemento.title}</h2>
+          <div class="cuerpo contenido-card">
+              <h4>Grupo: ${elemento.description}</h4>
+              <p>Tipo de Bici: ${elemento.technology}<p>    
+              <a href="#">Leer Mas...</a>
+          </div>
+        </div>`
         console.log( this.elemento);
     }
+    cad += `</div>`
+    document.getElementById("tarjetas").innerHTML = cad;
+
         var pLatitud = parseFloat(resultado[0].latitud)
         var pLongitud = parseFloat(resultado[0].longitud)
-        var pLatitud1 = parseFloat(resultado[1].latitud)
-        var pLongitud1 = parseFloat(resultado[1].longitud)
         console.log( "----mostrar latitud---");
         console.log(pLatitud);
         console.log( "----mostrar longitud---");
@@ -33,6 +43,12 @@ function mostrarDatos(resultado){
         iniciarMap(pLatitud,pLongitud)
 
 }
+
+
+  
+
+  
+  
 
 
 
@@ -61,4 +77,19 @@ function iniciarMap(pLatitud,pLongitud){
     position: coord,
     map: map
   });
+
+
+// const directionsService = new google.maps.DirectionsService();
+// const directionsRenderer = new google.maps.DirectionsRenderer();
+// directionsRenderer.setMap(map);
+// const request = {
+//   origin: new google.maps.LatLng(-37.902225985651114, -57.6187984287453),
+//   destination: new google.maps.LatLng(-38.004864573768636, -57.55002555888683),
+//   travelMode: 'BICYCLING'
+// };
+// directionsService.route(request, response => {
+//   directionsRenderer.setDirections(response);
+// });
 }
+
+
