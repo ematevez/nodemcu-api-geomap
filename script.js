@@ -31,23 +31,10 @@ function mostrarDatos(resultado){
         console.log( "-------");
 
         iniciarMap(pLatitud,pLongitud)
-        iniciarMap(pLatitud1,pLongitud1)
+
 }
 
 
-// function initMap(pLatitud, pLongitud) {
-//   const mapOptions = {
-//     zoom: 8,
-//     center: {
-//       lat: pLatitud,
-//       lng: pLongitud
-//   }  }
-//   
-//   console.log(mapOptions);
-// }
-    
-    
-// initMap(10.2, -11.256);
 
 
 function iniciarMap(pLatitud,pLongitud){
@@ -59,8 +46,8 @@ function iniciarMap(pLatitud,pLongitud){
     console.log( "----mostrar mapoptions---");
     console.log(mapOptions);
     console.log( "-------");
-
-  var coord = {lat:-38.0054771 ,lng: -57.5426106};
+  // -37.83601112394677, -57.67676095687907
+  var coord = {lat:-37.83601112394677 ,lng: -57.67676095687907};
   var map = new google.maps.Map(document.getElementById('map'),{
     zoom: 10,
     center: mapOptions
