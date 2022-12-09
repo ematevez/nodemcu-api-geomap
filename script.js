@@ -23,8 +23,11 @@ function mostrarDatos(resultado){
               <h3>Nombre: ${elemento.title}</h2>
           <div class="cuerpo contenido-card">
               <h4>Grupo: ${elemento.description}</h4>
-              <p>Tipo de Bici: ${elemento.technology}<p>    
-              <a href="#">Leer Mas...</a>
+              <p>Tipo de Bici: ${elemento.technology}<p>  
+              <p>Latitud: ${elemento.latitud}<p>  
+              <p>Longitud: ${elemento.longitud}<p>    
+              <p>Estado: SIN EMERGENCIA<p>  
+              <a href="#">Mas datos...</a>
           </div>
         </div>`
         console.log( this.elemento);
